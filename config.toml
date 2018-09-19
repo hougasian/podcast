@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Strongly Hyped Lauguage"
+sub = "a new podcast coming soon"
+theme = "tale"
