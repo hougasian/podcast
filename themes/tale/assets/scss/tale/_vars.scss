@@ -1,0 +1,30 @@
+// Color maps
+
+$brand-colors: (
+  'brown': #A6370F,
+  'orange': #F28322,
+  'yellow': #F2D22E,
+  'cream': #F2F0CE,
+  'blue': #2F5973,
+  'white': white
+  );
+
+$font: (
+  base: #{'Open Sans', sans-serif},
+  headline: #{'Montserrat', sans-serif},
+  code: #{'Monaco', monospace},
+  color: map-get($brand-colors, 'cream'),
+  size: 1.2rem
+  );
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}

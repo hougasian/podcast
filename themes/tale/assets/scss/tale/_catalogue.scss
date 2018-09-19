@@ -1,0 +1,36 @@
+.catalogue {
+  &-item {
+    border-bottom: 1px solid map-get($brand-colors, 'blue');
+    display: inline-block;
+    padding: 2rem 0;
+
+    &:hover .catalogue-line,
+    &:focus .catalogue-line {
+      width: 5rem;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &-time {
+    font-family: map-get($font, 'base');
+    letter-spacing: .5px;
+  }
+
+  &-title {
+    display: block;
+    font-family: map-get($font, 'base');
+    font-size: 2rem;
+    font-weight: 700;
+    margin: .5rem 0;
+  }
+
+  &-line {
+    @include transition(all .3s ease-out);
+    border-top: .2rem solid map-get($brand-colors, 'blue');
+    display: block;
+    width: 2rem;
+  }
+}

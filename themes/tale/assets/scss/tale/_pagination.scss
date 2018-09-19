@@ -1,0 +1,41 @@
+.pagination {
+  border-top: .1rem solid rgba(map-get($brand-colors, 'cream'), .7);
+  font-family: map-get($font, 'base');
+  padding-top: 2rem;
+  position: relative;
+  text-align: center;
+
+  span {
+    font-size: 1.1rem;
+  }
+
+  .top {
+    @include transition(all .3s ease-out);
+    font-family: map-get($font, 'base');
+    font-size: 1.1rem;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    @include transition(all .3s ease-out);
+    position: absolute;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+      text-decoration: none;
+    }
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}

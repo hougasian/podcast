@@ -1,0 +1,13 @@
+h2.nav-title {
+  color: rgba(map-get($brand-colors, 'white'), .9);
+  font-size: 200%;
+  font-weight: 900;
+  text-shadow: .1rem .1rem 0rem map-get($brand-colors, 'brown');
+  text-transform: uppercase;
+  word-wrap: break-word;
+  small {
+    color: map-get($brand-colors, 'yellow');
+    font-size: 80%;
+    text-transform: none;
+  }
+}
