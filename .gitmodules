@@ -1,0 +1,3 @@
+[submodule "themes/themes/strongly-hyped-theme"]
+	path = themes/themes/strongly-hyped-theme
+	url = https://github.com/strongly-hyped-language/gohugo-theme-strongly-hyped-theme.git
