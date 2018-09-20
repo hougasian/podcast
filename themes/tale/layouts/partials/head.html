@@ -1,28 +1,29 @@
 <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{- if eq .URL "/" }}
+		<meta name="description" content="{{ .Site.Params.Description }}">
+	{{- else if .Description }}
+		<meta name="description" content="{{ .Description }}">
+	{{- end }}
+
+	<title>
 		{{- if eq .URL "/" }}
-			<meta name="description" content="{{ .Site.Params.Description }}">
-		{{- else if .Description }}
-			<meta name="description" content="{{ .Description }}">
+			{{ .Site.Title }}
+		{{- else }}
+			{{ .Title }} &middot; {{ .Site.Title }}
 		{{- end }}
+	</title>
 
-		<title>
-			{{- if eq .URL "/" }}
-				{{ .Site.Title }}
-			{{- else }}
-				{{ .Title }} &middot; {{ .Site.Title }}
-			{{- end }}
-		</title>
+	<!-- CSS -->
+	{{- $inServerMode	:= .Site.IsServer }}
+	{{- $cssTarget		:= "css/style.css" }}
+	{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+	{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-		<!-- CSS -->
-		{{- $inServerMode	:= .Site.IsServer }}
-		{{- $cssTarget		:= "css/style.css" }}
-		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-		{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
-  	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Open+Sans" rel="stylesheet">
-
-		<!-- RSS -->
-		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-	</head>
+	<!-- RSS -->
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+</head>

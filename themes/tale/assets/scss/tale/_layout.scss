@@ -24,15 +24,10 @@ footer,
   }
 
   &-title {
-    @include transition(all .2s ease-out);
+    transition: .2s;
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-    }
   }
 
   ul {
@@ -43,7 +38,7 @@ footer,
   }
 
   li {
-    @include transition(all .2s ease-out);
+    transition: .2s;
     display: inline-block;
     opacity: .6;
     padding: 0 2rem 0 0;

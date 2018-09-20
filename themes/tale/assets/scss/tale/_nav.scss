@@ -1,0 +1,36 @@
+nav {
+  background: linear-gradient(
+    45deg,
+    darken(map-get($brand-colors, 'orange'), 5%),
+    lighten(map-get($brand-colors, 'orange'), 10%));
+  .nav-container {
+    color: map-get($brand-colors, 'white');
+    display: flex;
+    align-items: flex-end;
+    h2.nav-title {
+      color: map-get($brand-colors, 'white');
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 3.5rem;
+      margin-left: 1rem;
+      text-shadow: .1rem .1rem 0rem map-get($brand-colors, 'brown');
+      text-transform: uppercase;
+      word-wrap: break-word;
+      span {
+        color: complement(rgba(map-get($brand-colors, 'orange'), .9));
+        /* color: magenta; */
+        text-shadow: .1rem .1rem 0rem map-get($brand-colors, 'white');
+
+      }
+    }
+    li a {
+      color: lighten(map-get($brand-colors, 'yellow'), 20%);
+      font-family: map-get($font, 'headline');
+      font-weight: 900;
+      font-size: 125%;
+    }
+    .fas {
+      font-size: 9rem;
+    }
+  }
+}

@@ -16,20 +16,23 @@
 
   &-time {
     font-family: map-get($font, 'base');
+    font-size: 1rem;
     letter-spacing: .5px;
   }
 
   &-title {
+    color: map-get($brand-colors, 'brown');
     display: block;
-    font-family: map-get($font, 'base');
+    font-family: map-get($font, 'headline');
     font-size: 2rem;
     font-weight: 700;
     margin: .5rem 0;
   }
 
   &-line {
-    @include transition(all .3s ease-out);
-    border-top: .2rem solid map-get($brand-colors, 'blue');
+    transition: .3s;
+    border-top: .2rem solid map-get($brand-colors, 'orange');
+    color: map-get($brand-colors, 'brown');
     display: block;
     width: 2rem;
   }

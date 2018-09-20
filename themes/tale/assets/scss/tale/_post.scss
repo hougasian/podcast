@@ -12,7 +12,8 @@
   }
 
   &-title {
-    font-family: map-get($font, 'base');
+    color: map-get($font, 'orange');
+    font-family: map-get($font, 'headline');
     font-size: 4rem;
     margin: 1rem 0;
     text-align: center;

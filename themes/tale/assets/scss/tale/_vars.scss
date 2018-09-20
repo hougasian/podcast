@@ -16,15 +16,3 @@ $font: (
   color: map-get($brand-colors, 'cream'),
   size: 1.2rem
   );
-
-@mixin box-sizing($type: border-box) {
-  -webkit-box-sizing: $type;
-     -moz-box-sizing: $type;
-          box-sizing: $type;
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-     -moz-transition: $args;
-          transition: $args;
-}

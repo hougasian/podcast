@@ -1,6 +1,6 @@
 body {
-  background: #F28322;
-  color: #F2F0CE;
+  background: white;
+  color: #A6370F;
   font-family: Open Sans, sans-serif;
   font-size: 1.2rem;
   margin: 0;
@@ -14,7 +14,7 @@ h4 {
   line-height: normal; }
 
 a {
-  color: #F2F0CE;
+  color: #F28322;
   text-decoration: none; }
 
 blockquote {
@@ -72,7 +72,7 @@ pre code {
     .post-info span {
       font-style: italic; }
   .post-title {
-    font-family: Open Sans, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 4rem;
     margin: 1rem 0;
     text-align: center; }
@@ -375,23 +375,17 @@ footer,
     position: relative;
     text-align: center; }
   .nav-title {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    transition: .2s;
     display: inline-block;
     margin: 0;
     padding-right: .2rem; }
-    .nav-title:hover, .nav-title:focus {
-      opacity: .6; }
   .nav ul {
     list-style-type: none;
     margin: 1rem 0 0;
     padding: 0;
     text-align: center; }
   .nav li {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    transition: .2s;
     display: inline-block;
     opacity: .6;
     padding: 0 2rem 0 0; }
@@ -426,18 +420,14 @@ footer {
   .pagination span {
     font-size: 1.1rem; }
   .pagination .top {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    transition: .3s;
     font-family: Open Sans, sans-serif;
     font-size: 1.1rem;
     opacity: .6; }
     .pagination .top:hover {
       opacity: 1; }
   .pagination .arrow {
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    transition: .3s;
     position: absolute; }
     .pagination .arrow:hover, .pagination .arrow:focus {
       opacity: .6;
@@ -459,33 +449,49 @@ footer {
 
 .catalogue-time {
   font-family: Open Sans, sans-serif;
+  font-size: 1rem;
   letter-spacing: .5px; }
 
 .catalogue-title {
+  color: #A6370F;
   display: block;
-  font-family: Open Sans, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin: .5rem 0; }
 
 .catalogue-line {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  border-top: 0.2rem solid #2F5973;
+  transition: .3s;
+  border-top: 0.2rem solid #F28322;
+  color: #A6370F;
   display: block;
   width: 2rem; }
 
-h2.nav-title {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 200%;
-  font-weight: 900;
-  text-shadow: 0.1rem 0.1rem 0rem #A6370F;
-  text-transform: uppercase;
-  word-wrap: break-word; }
-  h2.nav-title small {
-    color: #F2D22E;
-    font-size: 80%;
-    text-transform: none; }
+nav {
+  background: linear-gradient(45deg, #ed760e, #f59e52); }
+  nav .nav-container {
+    color: white;
+    display: flex;
+    align-items: flex-end; }
+    nav .nav-container h2.nav-title {
+      color: white;
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 3.5rem;
+      margin-left: 1rem;
+      text-shadow: 0.1rem 0.1rem 0rem #A6370F;
+      text-transform: uppercase;
+      word-wrap: break-word; }
+      nav .nav-container h2.nav-title span {
+        color: rgba(34, 145, 242, 0.9);
+        /* color: magenta; */
+        text-shadow: 0.1rem 0.1rem 0rem white; }
+    nav .nav-container li a {
+      color: #f8e78e;
+      font-family: Montserrat, sans-serif;
+      font-weight: 900;
+      font-size: 125%; }
+    nav .nav-container .fas {
+      font-size: 9rem; }
 
 /*# sourceMappingURL=style.css.map */
